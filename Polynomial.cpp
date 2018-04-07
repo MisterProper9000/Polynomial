@@ -261,7 +261,7 @@ istream& operator >> (istream &in, Polynomial& pol)
 	return in;
 }
 
-//WARNING: при кратных корнях метод не сходится (но не циклится)
+//WARNING: РїСЂРё РєСЂР°С‚РЅС‹С… РєРѕСЂРЅСЏС… РјРµС‚РѕРґ РЅРµ СЃС…РѕРґРёС‚СЃСЏ (РЅРѕ РЅРµ С†РёРєР»РёС‚СЃСЏ)
 void Polynomial::findRealRoot(vector<double>* roots)
 {
 	double* st1 = new double[_degree + 1];
@@ -307,12 +307,6 @@ void Polynomial::findRealRoot(vector<double>* roots)
 			break;
 	} while (isNotEnoughAccurate);
 
-	//int tmp = 2;
-	//for (int i = 1; i < iterator; i++)
-	//	tmp = tmp * 2;
-	//     |
-	//     |
-	//     V
 	int tmp = 1;
 	double p = 1. / (tmp << (iterator));
 
