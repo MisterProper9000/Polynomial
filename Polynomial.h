@@ -15,9 +15,9 @@ protected:
 
 public:
 	Polynomial(); 
-	Polynomial(int degree, ...);        //перечисление коэффициентов
-	Polynomial(int degree, double* a);  //массив
-	Polynomial(double num);             //полином-чиселко
+	Polynomial(int degree, ...);        //РїРµСЂРµС‡РёСЃР»РµРЅРёРµ РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ
+	Polynomial(int degree, double* a);  //РјР°СЃСЃРёРІ
+	Polynomial(double num);             //РїРѕР»РёРЅРѕРј-С‡РёСЃРµР»РєРѕ
 	Polynomial(const Polynomial& other);
 	Polynomial(Polynomial&& obj);
 	virtual ~Polynomial();
@@ -38,7 +38,7 @@ public:
 	friend istream& operator>>(istream& in, Polynomial& pol);
 
 	virtual void whoAmI() const { printf_s("I'm a polynomial!\n"); };
-	virtual void findRealRoot(vector<double>* roots);                                     //Метод Лобачевского — Греффе (возвращает сначала вещ. корни, потом, если есть комплексные -- мусор
+	virtual void findRealRoot(vector<double>* roots);                                     //РњРµС‚РѕРґ Р›РѕР±Р°С‡РµРІСЃРєРѕРіРѕ вЂ” Р“СЂРµС„С„Рµ (РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРЅР°С‡Р°Р»Р° РІРµС‰. РєРѕСЂРЅРё, РїРѕС‚РѕРј, РµСЃР»Рё РµСЃС‚СЊ РєРѕРјРїР»РµРєСЃРЅС‹Рµ -- РјСѓСЃРѕСЂ
 	virtual Polynomial operator*(const Polynomial& other);
 	friend Polynomial operator*(const Polynomial& left, const Polynomial& right);
 
